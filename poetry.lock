@@ -15,20 +15,40 @@ optional = false
 python-versions = "*"
 
 [[package]]
-name = "dearpygui"
-version = "1.8.0"
-description = "DearPyGui: A simple Python GUI Toolkit"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
 name = "idna"
 version = "3.4"
 description = "Internationalized Domain Names in Applications (IDNA)"
 category = "main"
 optional = false
 python-versions = ">=3.5"
+
+[[package]]
+name = "PyQt6"
+version = "6.4.1"
+description = "Python bindings for the Qt cross platform application toolkit"
+category = "main"
+optional = false
+python-versions = ">=3.6.1"
+
+[package.dependencies]
+PyQt6-Qt6 = ">=6.4.0"
+PyQt6-sip = ">=13.4,<14"
+
+[[package]]
+name = "PyQt6-Qt6"
+version = "6.4.2"
+description = "The subset of a Qt installation needed by PyQt6."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "PyQt6-sip"
+version = "13.4.1"
+description = "The sip module support for PyQt6"
+category = "main"
+optional = false
+python-versions = ">=3.7"
 
 [[package]]
 name = "requests"
@@ -64,7 +84,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "0599bdf05f032d65e625daa531b400e3a04628dddbf737c20f96da1fa0e0f9e7"
+content-hash = "8a499bbaca91b391de219eaf2f0dbba6a62ab13b80b6a1e6c449eb7ed8213a7f"
 
 [metadata.files]
 certifi = [
@@ -161,29 +181,39 @@ charset-normalizer = [
     {file = "charset_normalizer-3.0.1-cp39-cp39-win_amd64.whl", hash = "sha256:0a11e971ed097d24c534c037d298ad32c6ce81a45736d31e0ff0ad37ab437d59"},
     {file = "charset_normalizer-3.0.1-py3-none-any.whl", hash = "sha256:7e189e2e1d3ed2f4aebabd2d5b0f931e883676e51c7624826e0a4e5fe8a0bf24"},
 ]
-dearpygui = [
-    {file = "dearpygui-1.8.0-cp310-cp310-macosx_10_6_x86_64.whl", hash = "sha256:bbad360b80a29a2deb40a8a2f73aa17fee1c5e817035e590509e067f3dc531d3"},
-    {file = "dearpygui-1.8.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:dabeff583800aea84bc537ab188a87398ed9e5e0537cc3e37fdc6e59d6b40495"},
-    {file = "dearpygui-1.8.0-cp310-cp310-manylinux1_x86_64.whl", hash = "sha256:7e93c41d64d884e1d9e8c6f991d51e4ed9dd9792f609d9a6f7399059c29d1706"},
-    {file = "dearpygui-1.8.0-cp310-cp310-win_amd64.whl", hash = "sha256:55006836de1d1a30ae6c03dd794d1798a4e9942b78f1239802afac4673c3fa38"},
-    {file = "dearpygui-1.8.0-cp311-cp311-macosx_10_6_x86_64.whl", hash = "sha256:cf5b76bbefa1348e5bf53a68cd7a1d24768819e0e9b5535168b378830a20b6c1"},
-    {file = "dearpygui-1.8.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:dfe7c746ab87b57ef84495462b36b0533435b3b6a94d241af7fe9219f54744f6"},
-    {file = "dearpygui-1.8.0-cp311-cp311-manylinux1_x86_64.whl", hash = "sha256:fe7ef89b9bd9ac34ab865b488b11fee5537767b63cedb436633054bd39bfc46e"},
-    {file = "dearpygui-1.8.0-cp311-cp311-win_amd64.whl", hash = "sha256:82c1ebd00d747e2c6d35eabaaacc851d29b38b49aad8f7726b6339aca2045aa2"},
-    {file = "dearpygui-1.8.0-cp37-cp37m-macosx_10_6_x86_64.whl", hash = "sha256:476748dbaaf1d4749959e6192218d64c700bd4a06c1a5d26a77b1b1ef49ca7ab"},
-    {file = "dearpygui-1.8.0-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:8ad1cc0a4af84e146f5191e86e54dcadff5a0863ae935ae34168af840848f0ab"},
-    {file = "dearpygui-1.8.0-cp37-cp37m-win_amd64.whl", hash = "sha256:e2cf13789ca6b91d56f1d83cfadc59ae21044bea0d19ff9d3c9b445d7ec05c8b"},
-    {file = "dearpygui-1.8.0-cp38-cp38-macosx_10_6_x86_64.whl", hash = "sha256:0cc9ce8c3b4ad324c8e224a6e483ad7d6c7919ab758c3bbeccaea75bb414f727"},
-    {file = "dearpygui-1.8.0-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:71e447e4f05200aae6839c45fccc08291c8e6b32540a4cf45f58e08cb1a0cf61"},
-    {file = "dearpygui-1.8.0-cp38-cp38-win_amd64.whl", hash = "sha256:f4637d217e0c773899947b73372e8685e45818af98e97838bee2c89a82d40c92"},
-    {file = "dearpygui-1.8.0-cp39-cp39-macosx_10_6_x86_64.whl", hash = "sha256:2ec09455e38e9b0ed182a4933b76a9fd6c3300aebe3d87c2b0cffe70c5b77b07"},
-    {file = "dearpygui-1.8.0-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:14ccf3cb6d877454a7943797e946e2b0f28ba7682e1cd876dac0a388853b01f8"},
-    {file = "dearpygui-1.8.0-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:525849a1217ee1f78c7321a54cb5d2ffb5a80a55e25da5ceeb83ca5cc21b99e8"},
-    {file = "dearpygui-1.8.0-cp39-cp39-win_amd64.whl", hash = "sha256:9c1233e887f956df7747468f51459f583760fc2e82670cf0dc9b8adf54c8a01a"},
-]
 idna = [
     {file = "idna-3.4-py3-none-any.whl", hash = "sha256:90b77e79eaa3eba6de819a0c442c0b4ceefc341a7a2ab77d7562bf49f425c5c2"},
     {file = "idna-3.4.tar.gz", hash = "sha256:814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"},
+]
+PyQt6 = [
+    {file = "PyQt6-6.4.1-cp37-abi3-macosx_10_14_universal2.whl", hash = "sha256:5eaca9cee1c53a487a3f17e6ff360323366d723ec4deefed6b5c9a067ae84a4e"},
+    {file = "PyQt6-6.4.1-cp37-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:9f803d8690be87b1cd8eec3b76774aae6d27e2e01a9ae7b0e1bfce80915f1c87"},
+    {file = "PyQt6-6.4.1-cp37-abi3-win_amd64.whl", hash = "sha256:cb8dc8b2f08324f758153fbce7d78f383f549e978995e7904072583e317d7983"},
+    {file = "PyQt6-6.4.1.tar.gz", hash = "sha256:0c1dcadf161331cfdbde0906c05f7f8048dc4907d717647c33bbc4404146f59f"},
+]
+PyQt6-Qt6 = [
+    {file = "PyQt6_Qt6-6.4.2-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:a29b8c858babd523e80c8db5f8fd19792641588ec04eab49af18b7a4423eb99f"},
+    {file = "PyQt6_Qt6-6.4.2-py3-none-macosx_11_0_arm64.whl", hash = "sha256:9f07c3c100cb46cca4074965e7494d4df4f0fc016497d5303c1fe135822876e1"},
+    {file = "PyQt6_Qt6-6.4.2-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:c0e91d0275d428496cacff717a9b719c52bfa52b21f124d638b79cc2217bc81e"},
+    {file = "PyQt6_Qt6-6.4.2-py3-none-win_amd64.whl", hash = "sha256:d19c4e72615762cd6f0b043f23fa5f0b02656091427ce6de1efccd58e10e6a53"},
+]
+PyQt6-sip = [
+    {file = "PyQt6_sip-13.4.1-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:ee06f255787a0b4957f357f93b78d2a11ca3761916833e3afa83f1381d4d1a46"},
+    {file = "PyQt6_sip-13.4.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:3a674c591d4274d4ea8127205290e927a7dab0eb87a0038d4f4ea1d430782649"},
+    {file = "PyQt6_sip-13.4.1-cp310-cp310-win_amd64.whl", hash = "sha256:3ef9392e4ae29d393b79237d85840cdc6b8831f36eed5d56c7d9b329b380cc8d"},
+    {file = "PyQt6_sip-13.4.1-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:a2a0461992c6657f343308b150c4d6b57e9e7a0e5c2f79538434e7fb869ea827"},
+    {file = "PyQt6_sip-13.4.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:5731f22618435654352ef07684549a17be82b75254227fc80b4b5b0b59fc6656"},
+    {file = "PyQt6_sip-13.4.1-cp311-cp311-win_amd64.whl", hash = "sha256:fbee0d554e0e98f56dbf6d94b00a28cc32425938ad7ae98fd91f8822c5b24d45"},
+    {file = "PyQt6_sip-13.4.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:a81490ee84d7a41a126b116081bd97d758f41bf706aee0a8cec24d6e4c660184"},
+    {file = "PyQt6_sip-13.4.1-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:224575e84805c4317bacd5d1b8e93e0ad5c48685dadbbe1e902d4ebe16f22828"},
+    {file = "PyQt6_sip-13.4.1-cp37-cp37m-win_amd64.whl", hash = "sha256:36ae29cdc223cacc1257d0f5075cf81474550c6d26b728f922487a2aa935f130"},
+    {file = "PyQt6_sip-13.4.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:fcc6d78314783f4a193f02353f431b7ea4d357f47c3c7a7d0740e723f69c64dc"},
+    {file = "PyQt6_sip-13.4.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:5bc4beb6fb1de4c9ba8beee7b1a4a813fa888c3b095206dafcd25d7e6e4ed2a7"},
+    {file = "PyQt6_sip-13.4.1-cp38-cp38-win_amd64.whl", hash = "sha256:0df998f2b6ceeacfd10de773441572e215be0c9cae566cc7dd36e231bf714a12"},
+    {file = "PyQt6_sip-13.4.1-cp39-cp39-macosx_10_9_universal2.whl", hash = "sha256:e670a7b2fb7e32204ce67d274017bfff3e21139d217d60cebbfcb75b019c91ee"},
+    {file = "PyQt6_sip-13.4.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:5c36ab984402e96792eebf4b031abfaa589aa20af3190a79c54502c16964d97e"},
+    {file = "PyQt6_sip-13.4.1-cp39-cp39-win_amd64.whl", hash = "sha256:43935873d60f57719632840d517afee04ef8f30e92cfe0dadc7e6326691920fc"},
+    {file = "PyQt6_sip-13.4.1.tar.gz", hash = "sha256:e00e287ea05bbc293fc6e2198301962af9b7b622bd2daf4288f925a88ae35dc9"},
 ]
 requests = [
     {file = "requests-2.28.2-py3-none-any.whl", hash = "sha256:64299f4909223da747622c030b781c0d7811e359c37124b4bd368fb8c6518baa"},
