@@ -4,6 +4,7 @@ from PyQt6.QtWidgets import (QApplication, QVBoxLayout, QWidget,
 from PyQt6.QtGui import QIcon, QFont
 from PyQt6.QtCore import Qt
 import sys
+import controller
 
 class Window(QWidget):
     def __init__(self):
@@ -31,8 +32,12 @@ class Window(QWidget):
         search_layout = QHBoxLayout()
         self.search_field = QLineEdit()
         self.search_field.setFont(QFont("Calibri", 12))
+        self.search_field.setPlaceholderText("title, author, or lines")
+
         search_button = QPushButton("Search")
         search_button.setFont(QFont("Calibri", 14))
+        search_button.clicked.connect(self.search)
+
         search_layout.addWidget(self.search_field)
         search_layout.addWidget(search_button)
 
@@ -43,6 +48,13 @@ class Window(QWidget):
         layout.addWidget(description_label)
         layout.addLayout(search_layout)
         layout.addWidget(results_text)
+
+    def search(self):
+        # get the user input
+        search_text = self.search_field.text()
+
+        # Make an API call with the controller script
+        search_results = controller.makek_call(search_text)
 
 def main():
     app = QApplication(sys.argv)
